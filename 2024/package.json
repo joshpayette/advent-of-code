@@ -1,11 +1,13 @@
 {
-  "name": "advent-of-code",
+  "name": "2024-advent-of-code",
   "version": "1.0.0",
   "description": "Repositroy for Advent of Code solutions",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "lint": "npx eslint ."
+    "lint": "npx eslint .",
+    "day1": "npx ts-node ./day1/index.ts",
+    "day1:test": "npx jest ./day1/index.test.ts"
   },
   "keywords": [],
   "author": "Joshua Payette",
