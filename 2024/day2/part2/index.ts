@@ -14,6 +14,7 @@ export function day2(input: string[] = parseInput('./day2/part1/INPUT.txt')) {
     let prevLevel: number = -1;
     let direction: 'increasing' | 'decreasing' | 'same' | 'unknown' = 'unknown';
     let result: Result = 'safe';
+    let problemDampnerEnabled = false;
 
     for (const level of levels) {
       // Skip the first level
@@ -24,6 +25,10 @@ export function day2(input: string[] = parseInput('./day2/part1/INPUT.txt')) {
 
       // Check if the levels are the same
       if (level - prevLevel === 0) {
+        if (!problemDampnerEnabled) {
+          problemDampnerEnabled = true;
+          continue;
+        }
         direction = 'same';
         result = 'unsafe';
         break;
@@ -36,16 +41,28 @@ export function day2(input: string[] = parseInput('./day2/part1/INPUT.txt')) {
 
       // Change in directions?
       if (direction === 'increasing' && level - prevLevel < 0) {
+        if (!problemDampnerEnabled) {
+          problemDampnerEnabled = true;
+          continue;
+        }
         result = 'unsafe';
         break;
       }
       if (direction === 'decreasing' && prevLevel - level < 0) {
+        if (!problemDampnerEnabled) {
+          problemDampnerEnabled = true;
+          continue;
+        }
         result = 'unsafe';
         break;
       }
 
       // Check if the levels are within tolerance
       if (Math.abs(level - prevLevel) > LEVEL_TOLERANCE) {
+        if (!problemDampnerEnabled) {
+          problemDampnerEnabled = true;
+          continue;
+        }
         result = 'unsafe';
         break;
       }
