@@ -1,6 +1,8 @@
-import { parseInput } from '../_lib/parse-input';
+import { parseInput } from '../../_lib/parse-input';
 
-export function day1(input: string[] = parseInput('./day1/INPUT.txt')): number {
+export function day1(
+  input: string[] = parseInput('./day1/part1/INPUT.txt'),
+): number {
   // the input has two numbers per line, so we need to split them into separate arrays
   // ex. '76569   66648' => list1: [76569], list2: [66648]
   const list1: number[] = [];

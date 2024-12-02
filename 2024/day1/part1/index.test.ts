@@ -1,4 +1,4 @@
-import { day1 } from '.';
+import { day1 } from './index';
 import { test } from '@jest/globals';
 
 const input = ['3   4', '4   3', '2   5', '1   3', '3   9', '3   3'];
