@@ -54,9 +54,6 @@ export function day2(input: string[] = parseInput('./day2/part1/INPUT.txt')) {
 
       prevLevel = level;
     }
-
-    console.info(`Line: ${line} - Result: ${result}`);
-
     results.push(result);
   }
 
