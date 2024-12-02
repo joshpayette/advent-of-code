@@ -42,5 +42,7 @@ export function day1(
   return totalDistance;
 }
 
-const totalDistance = day1();
-console.log('Total Distance:', totalDistance);
+if (require.main === module) {
+  const totalDistance = day1();
+  console.log('Total Distance:', totalDistance);
+}

@@ -38,5 +38,7 @@ export function day1(
   return totalSimilarity;
 }
 
-const totalSimilarity = day1();
-console.log('Total Similarity:', totalSimilarity);
+if (require.main === module) {
+  const totalSimilarity = day1();
+  console.log('Total Similarity:', totalSimilarity);
+}
