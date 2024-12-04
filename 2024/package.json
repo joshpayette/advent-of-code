@@ -13,7 +13,11 @@
     "day2:part1": "npx ts-node ./day2/part1/index.ts",
     "day2:part1:test": "npx jest ./day2/part1/index.test.ts",
     "day2:part2": "npx ts-node ./day2/part2/index.ts",
-    "day2:part2:test": "npx jest ./day2/part2/index.test.ts"
+    "day2:part2:test": "npx jest ./day2/part2/index.test.ts",
+    "day3:part1": "npx ts-node ./day3/part1/index.ts",
+    "day3:part1:test": "npx jest ./day3/part1/index.test.ts",
+    "day3:part2": "npx ts-node ./day3/part2/index.ts",
+    "day3:part2:test": "npx jest ./day3/part2/index.test.ts"
   },
   "keywords": [],
   "author": "Joshua Payette",
